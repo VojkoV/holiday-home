@@ -1,0 +1,22 @@
+<ngb-carousel [pauseOnFocus]="false" [interval]="5000" [pauseOnHover]="false" *ngIf="carouselItems">
+    <ng-template ngbSlide *ngFor="let carouselItem of carouselItems">
+        <div class="picsum-img-wrapper">
+            <img [src]="carouselItem.imageSrc" alt="Random first slide" style="height: 100vh; width: 100%; object-fit: cover;">
+        </div>
+        <div class="carousel-caption" style="bottom: 45vh; top: 40vh;">
+            <!-- <h3 class="ls-l slide_typo" style="top: 47%; left: 50%;" style="max-width: 75vw;">
+                In the<i class="icon-heart-empty text-danger"></i>of Croatia
+            </h3>
+            <p class="ls-l slide_typo_2" style="top:55%; left:50%;" style="max-width: 75vw;">
+                a place ... to create new memories
+            </p> -->
+            <h1 class="text-light" style="font-size: 6vh;">
+                In the<i class="icon-heart-empty text-danger"></i>of Croatia {{ carouselItem.title }}
+            </h1>
+            <p style="font-size: 3vh;">
+                a place ... to create new memories
+            </p>
+            <p class="ls-l" style="top:70%; left:50%;"><a class="btn_1 rounded" href='tours-grid-isotope.html'>Read more</a></p>
+        </div>
+    </ng-template>
+</ngb-carousel>
