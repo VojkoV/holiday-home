@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import 'hammerjs';
 import 'mousetrap';
+import { ModalGalleryComponent } from './shared/modal-gallery/modal-gallery.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,9 @@ import 'mousetrap';
     HeaderComponent,
     CarouselComponent,
     HomepageComponent,
+    ModalGalleryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule, GoogleMapsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

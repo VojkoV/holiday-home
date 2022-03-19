@@ -9,3 +9,10 @@
 .ks-modal-gallery-panel {
     z-index: 90000 !important;
 }
+
+
+/* Fix white background in modal gallery */
+
+.main-image-container {
+    background-color: transparent;
+}

@@ -1,8 +1,8 @@
-<!-- <app-carousel [carouselItems]='heroCarouselItems'></app-carousel> -->
+<app-carousel [carouselItems]='heroCarouselItems'></app-carousel>
 
 
 <!-- Gallery -->
-<!-- <div class="bg-dark">
+<div class="bg-dark">
     <div class="container margin_60_35">
         <div class="main_title_2">
             <span><em></em></span>
@@ -16,7 +16,7 @@
                         <img src="assets/img/apartment_gallery/balcony.jpg" alt="">
                         <figcaption>
                             <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/balcony.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
+                                <a href="javascript:void(0);" (click)="openModal(302, 0)" title="View from the balcony" data-effect="mfp-zoom-in">
                                     <i class="pe-7s-albums"></i>
                                     <p>View from the balcony</p>
                                 </a>
@@ -24,7 +24,7 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li>
+                <li (click)="openModal(302, 1)">
                     <figure>
                         <img src="assets/img/apartment_gallery/livingroom.jpg" alt="">
                         <figcaption>
@@ -37,7 +37,7 @@
                         </figcaption>
                     </figure>
                 </li>
-                <li>
+                <li (click)="openModal(302, 2)">
                     <figure>
                         <img src="assets/img/apartment_gallery/diningroom.jpg" alt="">
                         <figcaption>
@@ -147,8 +147,16 @@
             <a href="blog.html" class="btn_1 rounded">View all news</a>
         </p>
     </div>
-</div> -->
+</div>
 <!-- /grid gallery -->
 
-<button (click)="openModal(302, 0)">Open modal gallery id=1 at index=0</button>
+<!-- <div class="my-google-map">
+    <google-map [width]="100"></google-map>
+</div> -->
+
+<div class="my-google-map">
+    <google-map [width]="'100%'" [height]="'70vh'" [options]="mapOptions">
+        <map-marker [position]="marker.position"></map-marker>
+    </google-map>
+</div>
 <!-- /container -->
