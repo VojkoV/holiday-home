@@ -159,27 +159,20 @@
         <map-marker [position]="marker.position"></map-marker>
     </google-map>
 </div>
-<!-- /container -->
-<div class="bg-light">
-    <div class="container margin_60_35">
-        <ngb-datepicker [displayMonths]="3" [navigation]="'arrows'" [showWeekNumbers]="false" [outsideDays]="'hidden'">
-        </ngb-datepicker>
-    </div>
-</div>
 
-<div class="call_section vh-100">
-    <div class="container">
-        <div class="col-lg-5 col-md-6 float-right pr-0">
-            <div class="container bg-dark">
-                <h3>Book Unique Experiences</h3>
-                <p>Expolore top rated tours, hotels and restaurants around the world!</p>
-                <form>
-                    <div class="form-group">
-                        <ngb-datepicker [displayMonths]="3" [navigation]="'arrows'" [showWeekNumbers]="false" [outsideDays]="'hidden'">
-                        </ngb-datepicker>
-                    </div>
-                </form>
-            </div>
+<div class="call_section min-vh-100 row">
+    <div class="col-lg-6">
+    </div>
+    <div class="col-lg-6" ngsReveal>
+        <div class="bg-dark margin_60_35 p-5 m-auto" style="width: max-content;">
+            <h2 class="text-danger">Check Availability</h2>
+            <p>Expolore top rated tours, hotels and restaurants around the world!</p>
+            <form>
+                <div class="form-group">
+                    <ngb-datepicker [displayMonths]="this.numberOfMonthsInCalendar" [navigation]="'arrows'" [showWeekNumbers]="false" [outsideDays]="'hidden'" [maxDate]="this.maxDate" [minDate]="this.minDate" class="bg-light">
+                    </ngb-datepicker>
+                </div>
+            </form>
         </div>
     </div>
 </div>

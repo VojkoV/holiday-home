@@ -13,6 +13,7 @@ import 'hammerjs';
 import 'mousetrap';
 import { ModalGalleryComponent } from './shared/modal-gallery/modal-gallery.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HomepageComponent,
     ModalGalleryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule, GoogleMapsModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule, GoogleMapsModule, NgsRevealModule],
   providers: [],
   bootstrap: [AppComponent],
 })
