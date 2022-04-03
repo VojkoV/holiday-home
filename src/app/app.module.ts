@@ -1,3 +1,4 @@
+import { CalendarModule } from 'primeng/calendar';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,14 @@ import 'mousetrap';
 import { ModalGalleryComponent } from './shared/modal-gallery/modal-gallery.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { NgsRevealModule } from 'ngx-scrollreveal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {GMapModule} from 'primeng/gmap';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {BadgeModule} from 'primeng/badge';
+import { DateRangePickerComponent } from './date-range-picker/date-range-picker.component';
+import { ScrollTopModule } from 'primeng/scrolltop';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 @NgModule({
   declarations: [
@@ -23,8 +32,11 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
     CarouselComponent,
     HomepageComponent,
     ModalGalleryComponent,
+    DateRangePickerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule, GoogleMapsModule, NgsRevealModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule, GoogleMapsModule, NgsRevealModule,
+     CalendarModule, BrowserAnimationsModule, GMapModule, InputNumberModule, OverlayPanelModule, BadgeModule,
+     ScrollTopModule, ScrollPanelModule ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,6 @@
+<p-calendar [inline]="true" [minDate]="this.minDateValue" [maxDate]="this.maxDateValue" selectionMode="range" [showOtherMonths]="false" [readonlyInput]="true" [disabledDates]="this.disabledDates" [numberOfMonths]="this.numberOfMonthsInCalendar">
+    <ng-template pTemplate="date" let-date>
+        <span class="m-0 p-0">{{date.day}}</span>
+        <span *ngIf="this.getPriceFromDate(date) != null" class="text-info m-0 p-0 font-weight-bold" style="font-size: small;">{{ this.getPriceFromDate(date) }} $</span>
+    </ng-template>
+</p-calendar>

@@ -1,4 +1,8 @@
 @import "~@angular/cdk/overlay-prebuilt.css";
+html {
+    scroll-behavior: smooth;
+}
+
 .ks-modal-gallery-backdrop {
     background: #000 !important;
     ;
@@ -10,9 +14,61 @@
     z-index: 90000 !important;
 }
 
+.input-number-button {
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.input-number-button:hover {
+    background-color: white !important;
+    border-color: rgb(255, 0, 0, 0.3) !important;
+    color: rgb(255, 0, 0) !important;
+}
+
+.input-number-input {
+    border-color: rgba(0, 0, 0, 0.3) !important;
+    text-align: center;
+    width: 3rem;
+    pointer-events: none;
+    box-shadow: none !important;
+}
+
+.number-input-arrow:hover {
+    color: red;
+}
+
+.number-input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 
 /* Fix white background in modal gallery */
 
 .main-image-container {
     background-color: transparent;
 }
+
+
+/* Calendar */
+
+.p-datepicker td>span {
+    flex-direction: column;
+}
+
+.p-datepicker table th {
+    text-align: center;
+}
+
+.p-datepicker table td>span {
+    height: 3rem;
+    width: 3rem;
+}
+
+
+/* .p-calendar td span.p-disabled {
+    color: red !important;
+    background: orange !important
+} */

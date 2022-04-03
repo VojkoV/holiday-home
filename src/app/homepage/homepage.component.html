@@ -1,178 +1,102 @@
-<app-carousel [carouselItems]='heroCarouselItems'></app-carousel>
-
+<app-carousel id="home" [carouselItems]='heroCarouselItems'></app-carousel>
 
 <!-- Gallery -->
-<div class="bg-dark">
-    <div class="container margin_60_35">
-        <div class="main_title_2">
-            <span><em></em></span>
-            <h2 class="text-light">Are you interested in spending youe holidays at our apartment?</h2>
-            <p class="text-danger">Here are some pictures of the apartment ...</p>
-        </div>
-        <div class="grid">
-            <ul class="magnific-gallery text-light">
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/balcony.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="javascript:void(0);" (click)="openModal(302, 0)" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li (click)="openModal(302, 1)">
-                    <figure>
-                        <img src="assets/img/apartment_gallery/livingroom.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/livingroom.jpg" title="Living room" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>Living room</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li (click)="openModal(302, 2)">
-                    <figure>
-                        <img src="assets/img/apartment_gallery/diningroom.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/diningroom.jpg" title="Dining room" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>Dining room</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/kitchen.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/kitchen.jpg" title="Kitchen" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>Kitchen</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/master_bedroom.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/master_bedroom.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/2nd_room.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/2nd_room.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/3rd_room.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/3rd_room.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/loft_bedroom.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/loft_bedroom.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/garden1.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/garden1.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/img/apartment_gallery/garden2.jpg" alt="">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="assets/img/apartment_gallery/garden2.jpg" title="View from the balcony" data-effect="mfp-zoom-in">
-                                    <i class="pe-7s-albums"></i>
-                                    <p>View from the balcony</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </div>
-        <p class="text-center">
-            <a href="blog.html" class="btn_1 rounded">View all news</a>
-        </p>
-    </div>
-</div>
+<app-modal-gallery></app-modal-gallery>
 <!-- /grid gallery -->
 
-<!-- <div class="my-google-map">
-    <google-map [width]="100"></google-map>
-</div> -->
-
-<div class="my-google-map">
-    <google-map [width]="'100%'" [height]="'70vh'" [options]="mapOptions">
-        <map-marker [position]="marker.position"></map-marker>
-    </google-map>
-</div>
-
-<div class="call_section min-vh-100 row">
-    <div class="col-lg-6">
-    </div>
-    <div class="col-lg-6" ngsReveal>
-        <div class="bg-dark margin_60_35 p-5 m-auto" style="width: max-content;">
-            <h2 class="text-danger">Check Availability</h2>
-            <p>Expolore top rated tours, hotels and restaurants around the world!</p>
-            <form>
-                <div class="form-group">
-                    <ngb-datepicker [displayMonths]="this.numberOfMonthsInCalendar" [navigation]="'arrows'" [showWeekNumbers]="false" [outsideDays]="'hidden'" [maxDate]="this.maxDate" [minDate]="this.minDate" class="bg-light">
-                    </ngb-datepicker>
+<!-- General info -->
+<div id="general-info" class="bg_color_1">
+    <div class="container margin_60_35 py-5">
+        <div class="main_title_2">
+            <span><em></em></span>
+            <h2>Our Origins and Story</h2>
+            <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-lg-6 wow" data-wow-offset="150">
+                <figure class="block-reveal">
+                    <div class="block-horizzontal"></div>
+                    <img src="assets/img/apartment_gallery/balcony.jpg" class="img-fluid" alt="">
+                </figure>
+            </div>
+            <div class="col-lg-6">
+                <h2>Description</h2>
+                <p>
+                    <span class="text-danger font-weight-bolder">Vila Ana</span> is an apartment placed in a small town called Njivice, located on the island of Krk, Croatia. It is placed within walking distance from the sea (aprox. 10 minutes). The apartment
+                    is suited both for family holidays, and for groups of friends who want to create new shared memories.
+                </p>
+                <div class="row">
+                    <div class="col-lg-6 pr-0">
+                        <ul>
+                            <li><i class="fa fa-bed" aria-hidden="true"></i> 4 Bedrooms (2 x double + 2 x 3/4)</li>
+                            <li><i class="fa fa-bath" aria-hidden="true"></i> 2 Toliets</li>
+                            <li><i class="fa fa-people-group" aria-hidden="true"></i> For 4-9 people</li>
+                            <li><i class="fa fa-baby" aria-hidden="true"></i> Suitable for children</li>
+                            <li><i class="fa fa-square-parking" aria-hidden="true"></i> 2 Parking Spots</li>
+                            <li><i class="fa fa-paw" aria-hidden="true"></i> Pet friendly, * fee</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="fa fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+                            <li><img src="assets/img/hotel_facilites_icon_7.svg" style="height: 14px;" class="m-0 p-0" alt=""> Air Condition</li>
+                            <li><i class="fa-solid fa-fire-burner" aria-hidden="true"></i> Gas Grill</li>
+                            <li><i class="fa-solid fa-seedling" aria-hidden="true"></i> Private Garden</li>
+                            <li><i class="fa-solid fa-hot-tub" aria-hidden="true"></i> Hot Tub</li>
+                        </ul>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+<p-gmap id="location" [overlays]="mapOverlays" [options]="mapOptions" [style]="{'width':'100%','height':'100vh'}"></p-gmap>
+
+<div id="availability" class="call_section min-vh-100" style="display: flex;">
+    <div class="bg-dark px-sm-2 px-md-4 m-auto py-4" style="width: fit-content;" ngsReveal>
+        <div class="pl-2 m-auto pb-2">
+            <h2 class="text-danger">Check Availability</h2>
+        </div>
+        <div class="pl-2 form-group">
+            <div class="form-control justify-content-between" (click)="op.toggle($event)" style="height: min-content; display: flex; width: fit-content;">
+                <div class="mr-5 text-left my-auto" style="height: fit-content;">
+                    <i class="pi pi-users"></i> Guests ...
+                </div>
+                <div class="ml-5 text-right">
+                    <p-badge [value]="'6'" severity="danger"></p-badge>
+                </div>
+            </div>
+            <small class="block text-light">Make sure to set the number of guests, as it determines the pricing.</small>
+
+            <p-overlayPanel #op>
+                <ng-template pTemplate>
+                    <div class="d-flex align-items-center justify-content-between form-group">
+                        <p class="m-0 mr-5 text-danger font-weight-bold">Adults: <span class="text-muted">16+ years</span></p>
+                        <div class="align-items-center" style="display: flex; height: min-content;">
+                            <i class="pi pi-chevron-left number-input-arrow"></i>
+                            <input class="form-control number-input mx-2" style="width: 3rem;" type="number" readonly value="4">
+                            <i class="pi pi-chevron-right number-input-arrow"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between form-group mb-0">
+                        <p class="m-0 mr-5 text-danger font-weight-bold">Children: <span class="text-muted">0-16 years</span></p>
+                        <div class="align-items-center" style="display: flex; height: min-content;">
+                            <i class="pi pi-chevron-left number-input-arrow"></i>
+                            <input class="form-control number-input mx-2" style="width: 3rem;" type="number" readonly value="4">
+                            <i class="pi pi-chevron-right number-input-arrow"></i>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-overlayPanel>
+        </div>
+
+        <div class="m-auto text-center d-flex flex-column">
+            <label class="block text-light h3">Calendar</label>
+            <app-date-range-picker></app-date-range-picker>
+        </div>
+    </div>
+</div>
+
+<p-scrollTop target="parent" [threshold]="150" icon="pi pi-arrow-up">
+</p-scrollTop>

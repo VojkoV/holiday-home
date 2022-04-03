@@ -1,1 +1,31 @@
-<p>modal-gallery works!</p>
+<!-- Gallery -->
+<div id="gallery" class="bg-dark">
+    <div class="container margin_60_35">
+        <div class="main_title_2">
+            <span><em></em></span>
+            <h2 class="text-light">Are you interested in spending youe holidays at our apartment?</h2>
+            <p class="text-danger">Here are some pictures of the apartment ...</p>
+        </div>
+        <div class="grid">
+            <ul class="magnific-gallery text-light">
+                <li *ngFor="let image of images; let i = index;">
+                    <figure>
+                        <img [src]="this.image.modal.img" [alt]="this.imageDescriptions[i]">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="javascript:void(0);" (click)="openModal(302, i)" [title]="this.imageDescriptions[i]" data-effect="mfp-zoom-in">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>{{ this.imageDescriptions[i] }}</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /grid gallery -->
