@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-date-range-picker',
   templateUrl: './date-range-picker.component.html',
-  styleUrls: ['./date-range-picker.component.css']
+  styleUrls: ['./date-range-picker.component.css'],
 })
 export class DateRangePickerComponent implements OnInit {
   numberOfMonthsInCalendar: number = 3;
@@ -13,9 +13,7 @@ export class DateRangePickerComponent implements OnInit {
   disabledDates: Date[] = [];
   dateObjectList;
 
-  constructor(
-    private breakpointObserver: BreakpointObserver
-  ) {
+  constructor(private breakpointObserver: BreakpointObserver) {
     // detect screen size changes
     this.breakpointObserver
       .observe(['(max-width: 1500px)'])
@@ -57,8 +55,7 @@ export class DateRangePickerComponent implements OnInit {
     console.log(this.dateObjectList);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   getDaysArray(start: Date, end: Date) {
     for (
@@ -98,6 +95,8 @@ export class DateRangePickerComponent implements OnInit {
   getRandomInt(min: number, max: number) {
     min = Math.ceil(min);
     max = Math.floor(max);
+    if(Math.random() > 0.8)
+      return 0;
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 }

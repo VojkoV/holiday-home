@@ -1,0 +1,35 @@
+<div class="form-control justify-content-between" (click)="op.toggle($event)" style="height: min-content; display: flex; width: fit-content;">
+    <div class="mr-5 text-left my-auto" style="height: fit-content;">
+        <i class="pi pi-users"></i> Guests ...
+    </div>
+    <div class="ml-5 text-right">
+        <p-badge [value]="numberOfGuests.adults + numberOfGuests.children + ''" severity="danger"></p-badge>
+    </div>
+</div>
+
+
+<p-overlayPanel #op>
+    <ng-template pTemplate>
+        <div class="d-flex align-items-center justify-content-between form-group">
+            <p class="m-0 mr-5 text-danger font-weight-bold">Adults: <span class="text-muted">16+ years</span></p>
+            <div class="align-items-center" style="display: flex; height: min-content;">
+                <i class="pi pi-chevron-left number-input-arrow my-auto" (click)="numberOfGuests.adults = numberOfGuests.adults - 1"></i>
+                <p class="mx-2 my-auto text-center border-bottom" style="width: 3rem;">{{ numberOfGuests.adults }}</p>
+                <i class="pi pi-chevron-right number-input-arrow my-auto" (click)="numberOfGuests.adults = numberOfGuests.adults + 1"></i>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between form-group mb-0">
+            <p class="m-0 mr-5 text-danger font-weight-bold">Children: <span class="text-muted">0-16 years</span></p>
+            <div class="align-items-center" style="display: flex; height: min-content;">
+                <i class="pi pi-chevron-left number-input-arrow my-auto disabled" (click)="numberOfGuests.children = numberOfGuests.children - 1"></i>
+                <p class="mx-2 my-auto text-center border-bottom" style="width: 3rem;">{{ numberOfGuests.children }}</p>
+                <i class="pi pi-chevron-right number-input-arrow my-auto" (click)="numberOfGuests.children = numberOfGuests.children + 1"></i>
+            </div>
+            <!-- <div class="align-items-center" style="display: flex; height: min-content;">
+                <i class="pi pi-chevron-left number-input-arrow"></i>
+                <input class="form-control number-input mx-2" style="width: 3rem;" type="number" readonly value="4">
+                <i class="pi pi-chevron-right number-input-arrow"></i>
+            </div> -->
+        </div>
+    </ng-template>
+</p-overlayPanel>

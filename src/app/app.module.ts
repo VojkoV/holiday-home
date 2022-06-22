@@ -23,6 +23,7 @@ import {BadgeModule} from 'primeng/badge';
 import { DateRangePickerComponent } from './date-range-picker/date-range-picker.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { GuestNumberInputComponent } from './shared/guest-number-input/guest-number-input.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
     HomepageComponent,
     ModalGalleryComponent,
     DateRangePickerComponent,
+    GuestNumberInputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, GalleryModule, GoogleMapsModule, NgsRevealModule,
      CalendarModule, BrowserAnimationsModule, GMapModule, InputNumberModule, OverlayPanelModule, BadgeModule,
